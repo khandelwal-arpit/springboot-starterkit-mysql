@@ -1,0 +1,33 @@
+version: '3.5'
+services:
+  mysql:
+    image: mysql:latest
+    restart: always
+    container_name: "mysql"
+    volumes:
+      - "./db:/var/lib/mysql"
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=brs
+      - MYSQL_USER=brs-user
+      - MYSQL_PASSWORD=changeit
+  web:
+    build: .
+    links:
+      - mysql
+    container_name: BRS-Service
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_PORT=3306
+      - DB_NAME=brs
+      - DB_HOST=mysql
+      - MYSQL_USER=brs-user
+      - MYSQL_USER_PASSWORD=changeit
+      - SPRING_PROFILES_ACTIVE=prod
+
+    depends_on:
+      - mysql
