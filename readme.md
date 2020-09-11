@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a><img src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/spring-framework.png" alt="spring boot"></a>
+  <a><img src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/spring-framework.png" alt="spring boot"></a>
   <br>
   Spring Boot Starterkit
   <br>
@@ -22,7 +22,7 @@
         <img src="https://img.shields.io/badge/Material%20Design-UI-orange.svg">  
     </a>      
     <a alt="Docker">
-        <img src="https://img.shields.io/badge/Docker-v18-yellowgreen.svg" />
+        <img src="https://img.shields.io/badge/Docker-v19-yellowgreen.svg" />
     </a>
     <a alt="Dependencies">
         <img src="https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg" />
@@ -37,22 +37,31 @@
 
 ## Table of Contents ##
 1. [Philosophy](#Philosophy)
-2. [Spring Boot](#Spring-Boot)
-3. [Application](#Application)
-4. [Database Schema](#Database-Schema)
-5. [Technology](#Technology)
-6. [Application Structure](#Application-Structure)
-7. [Run Locally](#Running-the-server-locally)
-8. [Run Insider Docker](#Running-the-server-in-Docker-Container)
-9. [API Documentation](#API-Documentation)
-10. [User Interface](#User-Interface)
-11. [Contributor](#Contributor)
-12. [License](#License)
+2. [Medium.com Articles](#Medium.com-Articles)
+3. [Spring Boot](#Spring-Boot)
+4. [Application](#Application)
+5. [Database Schema](#Database-Schema)
+6. [Technology](#Technology)
+7. [Application Structure](#Application-Structure)
+8. [Run Locally](#Running-the-server-locally)
+9. [Run Insider Docker](#Running-the-server-in-Docker-Container)
+10. [API Documentation](#API-Documentation)
+11. [User Interface](#User-Interface)
+12. [Contributor](#Contributor)
+13. [License](#License)
 
 ## Philosophy ##
 A lot of work has gone into Spring Boot to reduce complexity and dependencies, which largely alleviates our previous reservations. If you live in a Spring ecosystem and are moving to microservices, Spring Boot is now the obvious choice. Spring Boot allows easy set up of standalone Spring-based applications. It's ideal for pulling up new microservices and easy to deploy. It also makes data access less of a pain due to the hibernate mappings with much less boilerplate code. You can get started with minimum fuss due to it taking an opinionated view of the Spring platform and third-party libraries. Most Spring Boot applications need very little Spring configuration. 
 
 The greatest thing about Spring Boot is the ability to be up and running in very little time. You don’t have to install a web server like JBoss, Websphere, or even Tomcat for that matter. All you need to do is pull in the proper libraries, annotate, and fire away. If you are going to do a lot of Spring Boot projects, I would highly suggest using the IntelliJ IDEA IDE. It has some great features for making Boot projects really easy to manage. You can of course choose between Maven or Gradle to manage dependencies and builds. This starter kit is based on Maven as it is what I am familiar and slightly more comfortable with. 
+
+## Medium.com Articles ##
+Readers can find more information about this starter-kit on my medium publication [The Resonant Web](https://medium.com/the-resonant-web). I have written a series of two articles on Spring Boot v2, here are the links:
+
+[Part-1](https://medium.com/the-resonant-web/spring-boot-2-0-starter-kit-part-1-23ddff0c7da2)  
+[Part-2](https://medium.com/the-resonant-web/spring-boot-2-0-project-structure-and-best-practices-part-2-7137bdcba7d3)
+
+There is also a NoSQL version of this starter kit which is built with MongoDB as the database. The location of GitHub repository for the same is [here](https://github.com/khandelwal-arpit/springboot-starterkit).
 
 ## Spring Boot ##
 _Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can just run. We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration._
@@ -100,7 +109,7 @@ The admin user interface is completely written in material design using Bootstra
 ## Database Schema ##
 The current schema looks as follows:
 
-<img src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/db-schema.png" alt="spring boot"></a>
+<img src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/db-schema.png" alt="spring boot"></a>
 
 - The authentication and authorization is governed by _User_ and _Role_ entities.
 - The _Agency_ entity keeps the details of agency along with who owns it.
@@ -125,7 +134,7 @@ Following libraries were used during the development of this starter kit :
 ## Application Structure ##
 Spring Boot is an opinionated framework that makes our life very easy since we don't have to choose the versions of different dependencies based on the version of Spring framework, its all taken care of by Spring Boot. I have tried to follow the same ideology while creating the project structure, at first it might seem like overwhelming, but do believe me once you start writing your pieces the structure will help you immensely by saving your time and thinking about questions which are already answered. The structure look as follows :
 
-<img src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/project-structure.png" alt="project structure"></a>
+<img src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/project-structure.png" alt="project structure"></a>
 
 **_Models & DTOs_**
 
@@ -224,7 +233,7 @@ The decorator pattern used by the Thymeleaf Layout dialect solves these issues. 
 The layout for admin portal is arranged as follows :
 
 <p align="center">
-<img width="600" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/ui-layout.png">
+<img width="600" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/ui-layout.png">
 </p>
 
 The individual areas in this layout serve the following purpose :
@@ -269,13 +278,13 @@ You can also use Maven plugin to run the app. Use the below example to run your 
 mvn spring-boot:run
 ```
 
-If you do not have a mongo instance running and still just want to create the JAR, then please use the following command:
+If you do not have a mysql instance running and still just want to create the JAR, then please use the following command:
 
 ```
 mvn install -DskipTests
 ```
 
-This will skip the test cases and won't check the availability of a mongodb instance and allow you to create the JAR.
+This will skip the test cases and won't check the availability of a mysql instance and allow you to create the JAR.
 
 You can follow any/all the above commands, or simply use the run configuration provided by your favorite IDE and run/debug the app from there for development purposes. Once the server is setup you should be able to access the admin interface at the following URL :
 
@@ -308,7 +317,7 @@ Command to run the container :
 docker run -p 8080:8080 spring/starterkit
 ```
 
-Please **note** when you build the container image and if mongodb is running locally on your system, you will need to provide your system's IP address (or cloud hosted database's IP) in the application.properties file to be able to connect to the database from within the container.
+Please **note** when you build the container image and if mysql is running locally on your system, you will need to provide your system's IP address (or cloud hosted database's IP) in the application.properties file to be able to connect to the database from within the container.
 
 ##### Docker Compose #####
 Another alternative to run the application is to use the docker-compose.yml file and utility. To build the application using docker-compose simply execute the following command :
@@ -336,31 +345,31 @@ You can use the User spec to execute the login api for generating the Bearer tok
 <p align="center">
     <b>User Spec</b><br>
     <br>
-    <img width="600" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/swagger-screens/swagger-1.png">
+    <img width="600" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/swagger-screens/swagger-1.png">
 </p>
 
 <p align="center">
     <b>User Login</b><br>
     <br>
-    <img width="600" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/swagger-screens/swagger-2.png">
+    <img width="600" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/swagger-screens/swagger-2.png">
 </p>
 
 <p align="center">
     <b>Authorization</b><br>
     <br>
-    <img width="600" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/swagger-screens/swagger-3.png">
+    <img width="600" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/swagger-screens/swagger-3.png">
 </p>
 
 <p align="center">
     <b>BRS Spec</b><br>
     <br>
-    <img width="600" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/swagger-screens/swagger-4.png">
+    <img width="600" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/swagger-screens/swagger-4.png">
 </p>
 
 <p align="center">
     <b>BRS APIs</b><br>
     <br>
-    <img width="600" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/swagger-screens/swagger-5.png">
+    <img width="600" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/swagger-screens/swagger-5.png">
 </p>
 
 The configuration of Swagger is being taken care of by class BrsConfiguration. I have defined two specs there with the help of "swaggerBRSApi" and "swaggerUserApi" methods. Since the login part is by default taken care of by Spring Security we don't get to expose its apis implicitly as the rest of the apis defined in the system and for the same reason I have defined a controller in the config package with the name "FakeController". Its purpose is to facilitate the generation of swagger documentation for login and logout apis, it will never come into existence during the application life cycle as the "/api/auth" api is being handled by the security filters defined in the code base. 
@@ -372,43 +381,43 @@ Here are the various screens of the Admin portal that you should be able to use 
 <p align="center">
     <b>Login</b><br>
     <br>
-    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/app-screens/login.png">
+    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/app-screens/login.png">
 </p>
 
 <p align="center">
     <b>Signup</b><br>
     <br>
-    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/app-screens/signup.png">
+    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/app-screens/signup.png">
 </p>
 
 <p align="center">
     <b>Dashboard</b><br>
     <br>
-    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/app-screens/dashboard.png">
+    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/app-screens/dashboard.png">
 </p>
 
 <p align="center">
     <b>Agency</b><br>
     <br>
-    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/app-screens/agency.png">
+    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/app-screens/agency.png">
 </p>
 
 <p align="center">
     <b>Buses</b><br>
     <br>
-    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/app-screens/buses.png">
+    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/app-screens/buses.png">
 </p>
 
 <p align="center">
     <b>Trips</b><br>
     <br>
-    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/app-screens/trips.png">
+    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/app-screens/trips.png">
 </p>
 
 <p align="center">
     <b>Profile</b><br>
     <br>
-    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/app-screens/profile.png">
+    <img width="800" src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/app-screens/profile.png">
 </p>
 
 ## Contributors ##
