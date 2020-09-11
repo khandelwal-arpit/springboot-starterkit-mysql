@@ -126,7 +126,7 @@ Following libraries were used during the development of this starter kit :
 - **MySQL** - Database 
 - **Swagger** - API documentation
 - **Thymeleaf** - Templating engine
-- **Material** - UI themeing/design
+- **Material** - UI theming/design
 - **Bootstrap** - CSS framework
 - **JWT** - Authentication mechanism for REST APIs
 
@@ -150,11 +150,11 @@ The security setting are present under the **_config_** package and the actual c
 
 **_Controllers_**
 
-Last, but the most important part is the controller layer. It binds everything together right from the moment a request is intercepted till the response is prepared and sent back. The controller layer is present in the **_controller_** package, the best practices suggest that we keep this layer versioned to support multiple versions of the application and the same practice is applied here. For now code is only present under v1 but over the time I expect to have different versions having different features. The Admin portal related controllers are present in the **_ui_** package and its concerning form command objects are located under the **_command_** package. The REST API controllers are located under the **_api_** package and the corresponding request classes are located under the **_request_** package. 
+Last, but the most important part is the controller layer. It binds everything together right from the moment a request is intercepted till the response is prepared and sent back. The controller layer is present in the **_controller_** package, the best practices suggest that we keep this layer versioned to support multiple versions of the application and the same practice is applied here. For now code is only present under v1 but over the time I expect to have different versions having different features. The Admin portal related controllers are present in the **_ui_** package and it's concerning form command objects are located under the **_command_** package. The REST API controllers are located under the **_api_** package and the corresponding request classes are located under the **_request_** package. 
 
 **_Request and Form Commands_**
 
-Again, there are different opinions amongst the fraternity regarding the usage of separate classes for mapping the incoming request vs using the DTOs, I am personally a fan of segregating the two as far as possible to promote loose coupling amongst UI and controller layer. The request objects and the form commands do give us a way to apply an additional level of validations on the incoming requests before they get converted to the DTOs which transfer valid information to the service layer for persistence and data retrieval. We could use DTOs here and some developers prefer that approach as it reduces some additional classes, however I usually prefer to keep the validation logic separate from the transfer objects and hence am inclined to use the request/command objects ahead of them.
+Again, there are different opinions amongst the fraternity regarding the usage of separate classes for mapping the incoming request vs using the DTOs, I am personally a fan of segregating the two as far as possible to promote loose coupling amongst the UI and controller layer. The request objects and the form commands do give us a way to apply an additional level of validations on the incoming requests before they get converted to the DTOs which transfer valid information to the service layer for persistence and data retrieval. We could use DTOs here and some developers prefer that approach as it reduces some additional classes, however I usually prefer to keep the validation logic separate from the transfer objects and hence am inclined to use the request/command objects ahead of them.
 
 The static resources are grouped under the **_resources_** directory. All the UI objects and their styling aspects can be located here.
 
