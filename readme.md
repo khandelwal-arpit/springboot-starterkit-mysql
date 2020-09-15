@@ -2,11 +2,11 @@
   <br>
   <a><img src="https://github.com/khandelwal-arpit/springboot-starterkit-mysql/blob/master/docs/images/spring-framework.png" alt="spring boot"></a>
   <br>
-  Spring Boot Starterkit
+  Spring Boot Starter-kit
   <br>
 </h1>
 
-<h4 align="center">Production ready starterkit for Spring Boot applications with MySQL database.</h4>
+<h4 align="center">Production ready starter-kit for Spring Boot applications with MySQL database.</h4>
 
 <p align="center">
     <a alt="Java">
@@ -37,7 +37,7 @@
 
 ## Table of Contents ##
 1. [Philosophy](#Philosophy)
-2. [Medium.com Articles](#Medium.com-Articles)
+2. [Medium Articles](#Medium-Articles)
 3. [Spring Boot](#Spring-Boot)
 4. [Application](#Application)
 5. [Database Schema](#Database-Schema)
@@ -55,7 +55,7 @@ A lot of work has gone into Spring Boot to reduce complexity and dependencies, w
 
 The greatest thing about Spring Boot is the ability to be up and running in very little time. You don’t have to install a web server like JBoss, Websphere, or even Tomcat for that matter. All you need to do is pull in the proper libraries, annotate, and fire away. If you are going to do a lot of Spring Boot projects, I would highly suggest using the IntelliJ IDEA IDE. It has some great features for making Boot projects really easy to manage. You can of course choose between Maven or Gradle to manage dependencies and builds. This starter kit is based on Maven as it is what I am familiar and slightly more comfortable with. 
 
-## Medium.com Articles ##
+## Medium Articles ##
 Readers can find more information about this starter-kit on my medium publication [The Resonant Web](https://medium.com/the-resonant-web). I have written a series of two articles on Spring Boot v2, here are the links:
 
 [Part-1](https://medium.com/the-resonant-web/spring-boot-2-0-starter-kit-part-1-23ddff0c7da2)  
